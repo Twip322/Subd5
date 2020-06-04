@@ -23,8 +23,7 @@ public class Examination {
     private List<Sheet> sheets;
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "{" +
                 "id=" + id +
                 ", exam_name='" + examName + '\'' +
@@ -34,18 +33,19 @@ public class Examination {
     public Examination() {
 
     }
+
     public Examination(Integer id,
                        String examName,
                        Classroom classrooms,
                        Course courses,
                        Examiner examiners,
                        List<Sheet> sheets
-                       ){
-        this.id=id;
+    ) {
+        this.id = id;
         this.examName = examName;
-        this.classroom=classrooms;
-        this.course=courses;
-        this.examiner=examiners;
-        this.sheets=sheets;
+        this.classroom = classrooms;
+        this.course = courses;
+        this.examiner = examiners;
+        this.sheets = sheets;
     }
 }

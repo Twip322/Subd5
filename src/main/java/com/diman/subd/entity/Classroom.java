@@ -30,10 +30,10 @@ public class Classroom {
 
     public Classroom(Integer id,
                      Integer classroom_num,
-                     Integer building){
-        this.id=id;
-        this.classroom_num=classroom_num;
-        this.building=building;
+                     Integer building) {
+        this.id = id;
+        this.classroom_num = classroom_num;
+        this.building = building;
     }
 }
 

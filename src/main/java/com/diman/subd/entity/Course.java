@@ -12,6 +12,7 @@ public class Course {
 
     @ManyToOne
     private Matriculant matriculant;
+
     @Override
     public String toString() {
         return "Build{" +
@@ -20,18 +21,17 @@ public class Course {
                 '}';
     }
 
-    public Course()
-    {
+    public Course() {
 
     }
 
     public Course(Integer id,
                   String courseName,
                   Matriculant matriculants
-                  ){
-        this.id=id;
+    ) {
+        this.id = id;
         this.courseName = courseName;
-        this.matriculant=matriculants;
+        this.matriculant = matriculants;
     }
 
 }

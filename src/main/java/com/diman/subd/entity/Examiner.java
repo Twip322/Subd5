@@ -15,6 +15,7 @@ public class Examiner {
 
     @OneToMany
     private List<Examination> examinations;
+
     @Override
     public String toString() {
         return "{" +
@@ -36,12 +37,12 @@ public class Examiner {
                     String middle_name,
                     String graduation,
                     List<Examination> examinations
-                    ) {
+    ) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.middle_name = middle_name;
         this.graduation = graduation;
-        this.examinations=examinations;
+        this.examinations = examinations;
     }
 }

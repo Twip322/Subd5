@@ -30,7 +30,7 @@ public class Matriculant {
                 '}';
     }
 
-    public Matriculant(){
+    public Matriculant() {
 
     }
 
@@ -41,13 +41,13 @@ public class Matriculant {
                        String statement_name,
                        List<Course> courses,
                        List<Sheet> sheets
-                       ){
-        this.id=id;
-        this.name=name;
-        this.middle_name=middle_name;
-        this.surname=surname;
-        this.statement_name=statement_name;
-        this.courses=courses;
-        this.sheets=sheets;
+    ) {
+        this.id = id;
+        this.name = name;
+        this.middle_name = middle_name;
+        this.surname = surname;
+        this.statement_name = statement_name;
+        this.courses = courses;
+        this.sheets = sheets;
     }
 }

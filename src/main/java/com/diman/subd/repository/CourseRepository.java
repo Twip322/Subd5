@@ -8,9 +8,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CourseRepository extends JpaRepository<Course,Integer> {
-  /*  @Query("SELECT new com.diman.subd.repository.CourseNameWithCount(courseName, COUNT (a)) FROM Course a"+
-    " GROUP BY courseName")
-     List<CourseNameWithCount> getNameCourseCount();
-    */
+public interface CourseRepository extends JpaRepository<Course, Integer> {
+
+    @Query("SELECT new com.diman.subd.repository.CourseNameWithCount "+
+            "(c.courseName,COUNT (c.courseName)) FROM Course c"+
+            " GROUP BY c.courseName ")
+        List<CourseNameWithCount> getNameWithCount();
 }

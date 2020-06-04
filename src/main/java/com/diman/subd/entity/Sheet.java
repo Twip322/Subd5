@@ -24,7 +24,7 @@ public class Sheet {
                 '}';
     }
 
-    public Sheet(){
+    public Sheet() {
 
     }
 
@@ -32,10 +32,10 @@ public class Sheet {
                  Integer rating,
                  Matriculant matriculants,
                  Examination examinations
-                 ){
-        this.id=id;
-        this.rating=rating;
-        this.matriculant=matriculants;
-        this.examination=examinations;
+    ) {
+        this.id = id;
+        this.rating = rating;
+        this.matriculant = matriculants;
+        this.examination = examinations;
     }
 }
