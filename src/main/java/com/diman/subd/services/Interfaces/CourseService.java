@@ -13,4 +13,5 @@ public interface CourseService {
     Optional<Course> getById(int id);
     Course editCourse(Course course);
     List<Course> getAll();
+    List<Course> getAll(int offset,int count);
 }

@@ -1,6 +1,7 @@
 package com.diman.subd.services.implementation;
 
 import com.diman.subd.entity.Course;
+import com.diman.subd.model.OffsetablePageRequest;
 import com.diman.subd.repository.CourseRepository;
 import com.diman.subd.services.Interfaces.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,5 +41,9 @@ public class CourseImplement implements CourseService {
     public List<Course> getAll()
     {
         return courseRepository.findAll();
+    }
+    @Override
+    public List<Course> getAll(int offset,int count){
+        return courseRepository.findAll(new OffsetablePageRequest(offset,count)).toList();
     }
 }

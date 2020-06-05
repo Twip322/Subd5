@@ -13,4 +13,5 @@ public interface ExaminerService {
     Optional<Examiner> getById(int id);
     Examiner editExaminer(Examiner examiner);
     List<Examiner> getAll();
+    List<Examiner> getAll(int offset,int count);
 }

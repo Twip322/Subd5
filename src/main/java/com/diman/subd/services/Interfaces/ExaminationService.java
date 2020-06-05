@@ -13,4 +13,5 @@ public interface ExaminationService {
     Optional<Examination> getById(int id);
     Examination editExamination(Examination examination);
     List<Examination> getAll();
+    List<Examination> getAll(int offset,int count);
 }

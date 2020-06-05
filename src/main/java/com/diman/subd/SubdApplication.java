@@ -64,19 +64,14 @@ public class SubdApplication {
     @EventListener(ApplicationReadyEvent.class)
     public void onStart() {
         readClasses();
-        //System.out.println(classroomService.getAll());
-        //System.out.println(courseService.getAll());
-        //System.out.println(examinationService.getAll());
-        //System.out.println(examinerService.getAll());
-        //System.out.println(matriculantService.getAll());
-        //System.out.println(sheetService.getAll());
-
-        //System.out.println(classroomService.getById(1));
-        //Classroom cr=new Classroom(1,123,2);
-        //classroomService.addClassroom(cr);
-        //this.firstRequest();
-        //this.secondRequest();
-        //this.thirdRequest();
+        readCourses();
+        readExaminers();
+        readExamines();
+        readMatriculants();
+        readSheets();
+        this.firstRequest();
+        this.secondRequest();
+        this.thirdRequest();
     }
 
     public void firstRequest() {
@@ -115,5 +110,25 @@ public class SubdApplication {
     public void readClasses()
     {
        System.out.println(classroomService.getAll(0,1));
+    }
+    public void readCourses()
+    {
+        System.out.println(courseService.getAll(0,1));
+    }
+    public void readExamines()
+    {
+        System.out.println(examinationService.getAll(0,2));
+    }
+    public void readExaminers()
+    {
+        System.out.println(examinerService.getAll(0,3));
+    }
+    public void readMatriculants()
+    {
+        System.out.println(matriculantService.getAll(0,1));
+    }
+    public void readSheets()
+    {
+        System.out.println(sheetService.getAll(0,3));
     }
 }

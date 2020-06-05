@@ -13,4 +13,5 @@ public interface MatriculantService {
     Optional<Matriculant> getById(int id);
     Matriculant editMatriculant(Matriculant matriculant);
     List<Matriculant> getAll();
+    List<Matriculant> getAll(int offset,int count);
 }

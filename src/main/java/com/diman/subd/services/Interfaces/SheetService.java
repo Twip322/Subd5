@@ -13,5 +13,6 @@ public interface SheetService {
     Optional<Sheet> getById(int id);
     Sheet editSheet(Sheet sheet);
     List<Sheet> getAll();
+    List<Sheet> getAll(int offset,int count);
 
 }

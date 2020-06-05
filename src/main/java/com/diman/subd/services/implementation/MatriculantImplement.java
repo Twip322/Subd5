@@ -1,6 +1,7 @@
 package com.diman.subd.services.implementation;
 
 import com.diman.subd.entity.Matriculant;
+import com.diman.subd.model.OffsetablePageRequest;
 import com.diman.subd.repository.MatriculantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,5 +38,9 @@ public class MatriculantImplement  implements MatriculantService {
     public List<Matriculant> getAll()
     {
         return matriculantRepository.findAll();
+    }
+    @Override
+    public List<Matriculant> getAll(int offset,int count){
+        return matriculantRepository.findAll(new OffsetablePageRequest(offset,count)).toList();
     }
 }

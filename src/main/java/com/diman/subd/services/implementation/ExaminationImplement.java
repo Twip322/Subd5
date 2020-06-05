@@ -1,6 +1,7 @@
 package com.diman.subd.services.implementation;
 
 import com.diman.subd.entity.Examination;
+import com.diman.subd.model.OffsetablePageRequest;
 import com.diman.subd.repository.ExaminationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,5 +40,10 @@ public class ExaminationImplement implements ExaminationService {
     public List<Examination> getAll()
     {
         return examinationRepository.findAll();
+    }
+    @Override
+    public List<Examination> getAll(int offset,int count)
+    {
+        return examinationRepository.findAll(new OffsetablePageRequest(offset,count)).toList();
     }
 }

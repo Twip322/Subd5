@@ -1,6 +1,7 @@
 package com.diman.subd.services.implementation;
 
 import com.diman.subd.entity.Sheet;
+import com.diman.subd.model.OffsetablePageRequest;
 import com.diman.subd.repository.SheetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,5 +38,10 @@ public class SheetImplement implements SheetService {
     public List<Sheet> getAll()
     {
         return sheetRepository.findAll();
+    }
+    @Override
+    public List<Sheet> getAll(int offset,int count)
+    {
+        return sheetRepository.findAll(new OffsetablePageRequest(offset,count)).toList();
     }
 }
