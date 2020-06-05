@@ -21,13 +21,13 @@ public class Matriculant {
 
     @Override
     public String toString() {
-        return "{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", middle_name" + middle_name + '\'' +
-                ", surname" + surname + '\'' +
-                ", statement_name" + statement_name +
-                '}';
+        return "Matriculant {" +'\n'+
+                "id=" + id + ", \n"+
+                "name='" + name + ", \n" +
+                "middle_name=" + middle_name + ", \n" +
+                "surname=" + surname + ", \n" +
+                "statement_name=" + statement_name + '\n'+
+                '}'+ '\n';
     }
 
     public Matriculant() {

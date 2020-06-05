@@ -15,10 +15,10 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Build{" +
-                "id=" + id +
-                ", course_name='" + courseName + '\'' +
-                '}';
+        return "Course {" +'\n'+
+                "id=" + id + ", \n"+
+                "course_name=" + courseName + '\n' +
+                '}'+ '\n';
     }
 
     public Course() {

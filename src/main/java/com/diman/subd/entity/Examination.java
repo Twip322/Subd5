@@ -24,10 +24,10 @@ public class Examination {
 
     @Override
     public String toString() {
-        return "{" +
-                "id=" + id +
-                ", exam_name='" + examName + '\'' +
-                '}';
+        return "Examination {" +'\n'+
+                "id=" + id + ", \n"+
+                "exam_name=" + examName + '\n' +
+                '}'+ '\n';
     }
 
     public Examination() {

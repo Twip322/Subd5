@@ -17,11 +17,11 @@ public class Classroom {
 
     @Override
     public String toString() {
-        return "Build{" +
-                "id=" + id +
-                ", classroom_num='" + classroom_num + '\'' +
-                ", building='" + building + '\'' +
-                '}';
+        return "Classroom {" +'\n'+
+                "id=" + id + ", \n"+
+                "classroom_num=" + classroom_num + ", \n" +
+                "building=" + building + '\n' +
+                '}'+ '\n';
     }
 
     public Classroom() {

@@ -18,10 +18,10 @@ public class Sheet {
 
     @Override
     public String toString() {
-        return "{" +
-                "id=" + id +
-                ", rating" + rating +
-                '}';
+        return "Sheet {" + '\n'+
+                "id=" + id + ", \n"+
+                "rating=" + rating + '\n'+
+                '}'+ '\n';
     }
 
     public Sheet() {

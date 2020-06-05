@@ -18,13 +18,13 @@ public class Examiner {
 
     @Override
     public String toString() {
-        return "{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname" + surname + '\'' +
-                ", middle_name" + middle_name + '\'' +
-                ", graduation" + graduation +
-                '}';
+        return "Examiner {" +'\n'+
+                "id=" + id + ", \n"+
+                "name=" + name + ", \n" +
+                "surname=" + surname + ", \n" +
+                "middle_name=" + middle_name + ", \n" +
+                "graduation=" + graduation + '\n'+
+                '}'+ '\n';
     }
 
     public Examiner() {

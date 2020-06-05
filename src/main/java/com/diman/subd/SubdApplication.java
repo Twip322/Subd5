@@ -63,12 +63,6 @@ public class SubdApplication {
 
     @EventListener(ApplicationReadyEvent.class)
     public void onStart() {
-        //readClassroom();
-        //readCourse();
-        //readExamination();
-        //readExaminer();
-        //readMatriculant();
-        //readSheet();
         System.out.println(classroomService.getAll());
         System.out.println(courseService.getAll());
         System.out.println(examinationService.getAll());
@@ -112,55 +106,5 @@ public class SubdApplication {
             System.out.print("Название экзамена: "+getSheetThroughExam.getExamName());
             System.out.println("Количество пятерок: "+getSheetThroughExam.getCount());
         });
-    }
-
-    private void createClassroom() {
-        Classroom classroom = new Classroom(null, 128, 3);
-        classroomRepository.save(classroom);
-    }
-
-    private void delClassroom() {
-        classroomRepository.deleteById(1);
-    }
-
-    private void updateClassroom() {
-        Classroom classroom = new Classroom(1, 111, 1);
-        classroomRepository.save(classroom);
-    }
-
-    private void readClassroom() {
-        for (Classroom classroom : classroomRepository.findAll(PageRequest.of(0, 3, Sort.unsorted())).toList()) {
-            System.out.println(classroom);
-        }
-    }
-
-    private void readCourse() {
-        for (Course course : courseRepository.findAll(PageRequest.of(0, 3, Sort.unsorted())).toList()) {
-            System.out.println(course);
-        }
-    }
-
-    private void readExamination() {
-        for (Examination examination : examinationRepository.findAll(PageRequest.of(0, 3, Sort.unsorted())).toList()) {
-            System.out.println(examination);
-        }
-    }
-
-    private void readExaminer() {
-        for (Examiner examiner : examinerRepository.findAll(PageRequest.of(0, 3, Sort.unsorted())).toList()) {
-            System.out.println(examiner);
-        }
-    }
-
-    private void readMatriculant() {
-        for (Matriculant matriculant : matriculantRepository.findAll(PageRequest.of(0, 3, Sort.unsorted())).toList()) {
-            System.out.println(matriculant);
-        }
-    }
-
-    private void readSheet() {
-        for (Sheet sheet : sheetRepository.findAll(PageRequest.of(0, 3, Sort.unsorted())).toList()) {
-            System.out.println(sheet);
-        }
     }
 }
