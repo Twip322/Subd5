@@ -63,15 +63,20 @@ public class SubdApplication {
 
     @EventListener(ApplicationReadyEvent.class)
     public void onStart() {
-        System.out.println(classroomService.getAll());
-        System.out.println(courseService.getAll());
-        System.out.println(examinationService.getAll());
-        System.out.println(examinerService.getAll());
-        System.out.println(matriculantService.getAll());
-        System.out.println(sheetService.getAll());
-        firstRequest();
-        secondRequest();
-        thirdRequest();
+        readClasses();
+        //System.out.println(classroomService.getAll());
+        //System.out.println(courseService.getAll());
+        //System.out.println(examinationService.getAll());
+        //System.out.println(examinerService.getAll());
+        //System.out.println(matriculantService.getAll());
+        //System.out.println(sheetService.getAll());
+
+        //System.out.println(classroomService.getById(1));
+        //Classroom cr=new Classroom(1,123,2);
+        //classroomService.addClassroom(cr);
+        //this.firstRequest();
+        //this.secondRequest();
+        //this.thirdRequest();
     }
 
     public void firstRequest() {
@@ -106,5 +111,9 @@ public class SubdApplication {
             System.out.print("Название экзамена: "+getSheetThroughExam.getExamName());
             System.out.println("Количество пятерок: "+getSheetThroughExam.getCount());
         });
+    }
+    public void readClasses()
+    {
+       System.out.println(classroomService.getAll(0,1));
     }
 }

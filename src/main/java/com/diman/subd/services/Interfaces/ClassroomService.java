@@ -13,4 +13,6 @@ public interface ClassroomService {
     Optional<Classroom> getById(int id);
     Classroom editClassroom(Classroom classroom);
     List<Classroom> getAll();
+    List<Classroom> getAll(int offset,int count);
+
 }

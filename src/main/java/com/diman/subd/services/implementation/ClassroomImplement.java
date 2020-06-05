@@ -2,7 +2,9 @@ package com.diman.subd.services.implementation;
 
 import com.diman.subd.entity.Classroom;
 import com.diman.subd.repository.ClassroomRepository;
+import com.diman.subd.model.OffsetablePageRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import com.diman.subd.services.Interfaces.ClassroomService;
 
@@ -39,5 +41,9 @@ public class ClassroomImplement implements ClassroomService {
     public List<Classroom> getAll()
     {
         return classroomRepository.findAll();
+    }
+    @Override
+    public List<Classroom> getAll(int offset,int count){
+        return classroomRepository.findAll(new OffsetablePageRequest(offset,count)).toList();
     }
 }
